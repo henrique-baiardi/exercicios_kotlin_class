@@ -11,7 +11,7 @@ fun main() {
     println("03 - Pesquisar contato")
     println("04 - Lista de contatos")
     println("05 - Sair")
-    var opcao: String? = ""
+    var opcao: String? =   ""
     opcao = readLine()
 
     var listaContatos: MutableList<Contato> = mutableListOf()
@@ -63,7 +63,7 @@ private fun buscarContato(
     println("Digite o nome que deseja encontrar: ")
     var buscar = readLine().toString()
 //                var pesquisa = listaContatos.filter { y -> y.nome.contains(buscar, true) }
-    var pesquisa = listaContatos.filter { y -> y.nome == buscar }
+    var pesquisa = listaContatos.filter {it.nome == buscar }
     var contador = 0
 
 //                var localizar = listaContatos.filter { contato.nome == this.nome }
