@@ -31,7 +31,7 @@ fun main() {
 
 //    var listaProgramadores:MutableList<Programador> = mutableListOf()
 //    var listaGestores:MutableList<Gestor> = mutableListOf()
-    var listaFuncionarios:MutableList<Any> = mutableListOf()
+    var listaFuncionarios:MutableList<Funcionario> = mutableListOf()
 
     if (cargo != "1" && cargo != "2"){
         println("Valor invalido")
@@ -61,22 +61,26 @@ fun main() {
     println("Digite o ID do funcionario:")
     var selecionado = readLine()
 
-    var pesquisa = listaFuncionarios.filter { it}
+    var pesquisa = listaFuncionarios.filter {it.ID == selecionado}
 
     while (pesquisa.count() == 0){
         println("Id nao encontrado...")
         println("Digite o ID do funcionario:")
         selecionado = readLine()
 
-        pesquisa = listaFuncionarios.filter { it.id == selecionado}
+        pesquisa = listaFuncionarios.filter {it.ID == selecionado}
+
+        println(pesquisa)
     }
-    println("1- Exibir seus Dados | 2 - Aumentar Salario")
-    var resposta = readLine()
-    if (resposta == "1") {
-        for (func in pesquisa) {
-            println("${func.nome}, ${func.id}, ${func.cpf}, ${func.tipoFuncionario}, ${func.salario}")
-        }
-    }
+    println(pesquisa[0])
+
+//    println("1- Exibir seus Dados | 2 - Aumentar Salario")
+//    var resposta = readLine()
+//    if (resposta == "1") {
+//        for (func in pesquisa) {
+//            println("${func.nome}, ${func.id}, ${func.cpf}, ${func.tipoFuncionario}, ${func.salario}")
+//        }
+//    }
 
 
 
