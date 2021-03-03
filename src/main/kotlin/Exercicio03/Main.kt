@@ -91,15 +91,17 @@ fun main() {
                 }
             }
         "2" -> {
-            for (cont in listaFuncionarios){
-                if (pesquisa[0].id == cont.id){
-                   if (cont.cargo == "1"){
-                       cont.salario?.times(1.1)
-                       println(cont.salario)
+            for (func in listaFuncionarios){
+                if (selecionado == func.id){
+                   if (func.cargo == "1"){
+                       //listaFuncionarios[0].salario = listaFuncionarios[0].salario?.times(1.1)
+                       func.salario = func.salario?.times(1.1)
+                       println(func.salario)
                    }else{
-                       cont.salario?.times(1.2)
-                       println(cont.salario)
+                       func.salario = func.salario?.times(1.2)
+                       println(func.salario)
                    }
+
                 }
             }
         }
