@@ -25,7 +25,7 @@ interface calcSalario{
 //
 fun main() {
 
-    //main ADD
+
     println("Digite o id do funcionário:")
     var id = readLine()
     println("Digite o nome do funcionário:")
@@ -64,6 +64,10 @@ fun main() {
     }
     //FIM main ADD
 
+    mainPesquisa(listaFuncionarios)
+}
+
+private fun mainPesquisa(listaFuncionarios: MutableList<Funcionario>) {
     //Main pesquisar
 
     println("Digite o id do funcionario:")
@@ -88,19 +92,19 @@ fun main() {
         "1" -> {
             for (func in pesquisa) {
                 println("ID: ${pesquisa[0].id}, Nome: ${pesquisa[0].name}, CPF: ${pesquisa[0].cpf}, R$${pesquisa[0].salario}, Cargo: ${pesquisa[0].cargo}")
-                }
             }
+        }
         "2" -> {
-            for (func in listaFuncionarios){
-                if (selecionado == func.id){
-                   if (func.cargo == "1"){
-                       //listaFuncionarios[0].salario = listaFuncionarios[0].salario?.times(1.1)
-                       func.salario = func.salario?.times(1.1)
-                       println(func.salario)
-                   }else{
-                       func.salario = func.salario?.times(1.2)
-                       println(func.salario)
-                   }
+            for (func in listaFuncionarios) {
+                if (selecionado == func.id) {
+                    if (func.cargo == "1") {
+                        //listaFuncionarios[0].salario = listaFuncionarios[0].salario?.times(1.1)
+                        func.salario = func.salario?.times(1.1)
+                        println(func.salario)
+                    } else {
+                        func.salario = func.salario?.times(1.2)
+                        println(func.salario)
+                    }
 
                 }
             }
